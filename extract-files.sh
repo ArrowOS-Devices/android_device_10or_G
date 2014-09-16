@@ -55,6 +55,12 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+        vendor/etc/gps.conf)
+            sed -i 's/DEBUG_LEVEL = 3/DEBUG_LEVEL = 2/g' "${2}"
+            ;;
+        vendor/etc/lowi.conf)
+            sed -i 's/LOWI_LOG_LEVEL = 3/LOWI_LOG_LEVEL = 2/g' "${2}"
+            ;;
         vendor/lib64/libvendor.goodix.hardware.fingerprint@1.0-service.so)
             "${PATCHELF_0_8}" --remove-needed "libprotobuf-cpp-lite.so" "${2}"
             ;;
