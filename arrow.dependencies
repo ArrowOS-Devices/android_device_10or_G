@@ -1,0 +1,12 @@
+[
+  {
+    "repository":  "android_vendor_10or_G",
+    "target_path": "vendor/10or/G",
+  },
+  {
+    "remote":      "github",
+    "repository":  "stormbreaker-project/kernel_10or_G",
+    "target_path": "kernel/10or/G",
+    "branch":      "12"
+  }
+]
